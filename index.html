@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Radio Online Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Masuk</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // Ganti ini dengan username & password yang kamu inginkan
+      if (user === "admin" && pass === "1234") {
+        window.location.href = "home.html"; // masuk ke halaman utama
+      } else {
+        document.getElementById("error").innerText = "Username atau password salah!";
+      }
+    }
+  </script>
+</body>
+</html>
